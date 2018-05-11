@@ -3,9 +3,7 @@ import styled from 'styled-components';
 
 const FormInput = styled.input.attrs({
     type: props => props.type,
-    value: props => props.value,
     name: props => props.name,
-    onChange: props => props.onChange
   })`
   padding: 0.5em;
   margin: 0.5em;
@@ -13,4 +11,15 @@ const FormInput = styled.input.attrs({
   border: none;
   border-radius: 3px;
   `;
+
+FormInput.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string,
+};
+
+FormInput.defaultProps = {
+  type: '',
+  name: '',
+};
+
 export default FormInput;

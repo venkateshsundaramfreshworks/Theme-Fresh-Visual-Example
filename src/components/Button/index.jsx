@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   border: 2px solid ;
   background: ${props => props.primary ? 'palevioletred' : props.theme ? props.theme.main : 'white'};
-  color: ${props => props.primary ? 'white' : props.theme ? props.theme.main : 'palevioletred'};
+  color: ${props => props.primary ? 'white' : props.theme ? 'white' : 'palevioletred'};
   font-size: 1em;
   margin: 1em 0em;
   cursor: pointer;
@@ -13,4 +13,13 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
+Button.propTypes = {
+  primary: PropTypes.bool,
+  theme: PropTypes.shape({ main: PropTypes.string })
+};
+
+Button.defaultProps = {
+  primary: false,
+  theme: { main: ''}
+}
 export default Button;

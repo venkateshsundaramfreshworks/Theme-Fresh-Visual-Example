@@ -7,4 +7,12 @@ const Title = styled.h1`
             color: ${props => props.themeColor ? props.themeColor : 'palevioletred'};
 `;
 
+Form.propTypes = {
+    themeColor: PropTypes.string
+};
+
+Form.defaultProps = {
+    themeColor: '',
+};
+
 export default Title;

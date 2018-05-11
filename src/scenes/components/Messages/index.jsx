@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
 import _find from 'lodash/find';
+import _noop from 'lodash/noop'
 import { connect } from 'react-redux';
 
 import Button from 'components/Button';
@@ -10,7 +11,7 @@ import MessageContent from './components/MessageContent';
 import { getMessageData } from 'services/messages/actions';
 import { themes } from 'constants/appConstants';
 
-class App extends React.Component {
+class Messsages extends React.Component {
    constructor (props) {
        super(props);
        this.state ={
@@ -54,8 +55,8 @@ class App extends React.Component {
             <Title themeColor={titleColor}>
             {title && title}
             </Title>
-            <Button primary onClick={this.handleClick}>Compose</Button>
-            {data && data.length !==0 && data.map((obj,index) => (<MessageContent key={index} from={obj.from} content={obj.content} time={obj.time}></MessageContent>))}
+            <Button theme={{main: titleColor}} onClick={this.handleClick}>Compose</Button>
+            {data && data.length !==0 && data.map((obj,index) => (<MessageContent borderColor={titleColor} key={index} from={obj.from} content={obj.content} time={obj.time}></MessageContent>))}
         </Wrapper> 
         </ThemeProvider>
       );
@@ -80,4 +81,4 @@ const mapDispatchToProps = dispatch => ({
     getMessageData: () => dispatch(getMessageData()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Messsages);
