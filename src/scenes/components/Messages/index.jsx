@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, {ThemeProvider} from 'styled-components';
 import _find from 'lodash/find';
 import _noop from 'lodash/noop'
