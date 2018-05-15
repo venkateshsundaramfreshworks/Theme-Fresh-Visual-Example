@@ -3,24 +3,26 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  border: 2px solid ;
-  background: ${props => props.primary ? 'palevioletred' : props.theme ? props.theme.main : 'white'};
-  color: ${props => props.primary ? 'white' : props.theme ? 'white' : 'palevioletred'};
-  font-size: 1em;
-  margin: 1em 0em;
-  cursor: pointer;
-  padding: 0.25em 1em;
-  border: 2px solid ${props => props.theme ? props.theme.main : 'palevioletred'} ;
-  border-radius: 3px;
+color: ${props => props.theme.bg};
+border: 2px solid ${props => props.theme.bg};
+background: ${props => props.theme.fg};
+font-size: 1em;
+outline: none;
+margin: 1em;
+padding: 0.25em 1em;
+border-radius: 3px;
+
+&:hover {
+    cursor: pointer;
+}
 `;
 
 Button.propTypes = {
-  primary: PropTypes.bool,
-  theme: PropTypes.shape({ main: PropTypes.string })
+    theme: PropTypes.shape({}),
 };
 
 Button.defaultProps = {
-  primary: false,
-  theme: { main: ''}
-}
+    theme: {},
+};
+
 export default Button;

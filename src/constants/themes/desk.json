@@ -1,0 +1,7 @@
+{
+    "themeAttributes": {
+        "name": "desk",
+        "background": {"type": "normal", "color": "#c8b8ed"},
+        "font": {"type": "normal", "color": "blue"}
+    }
+}

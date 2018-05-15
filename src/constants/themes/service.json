@@ -1,0 +1,7 @@
+{
+    "themeAttributes": {
+        "name": "service",
+        "background": {"type": "normal", "color": "papayawhip"},
+        "font": {"type": "normal", "color": "palevioletred"}
+    }
+}

@@ -9,7 +9,7 @@ const config = {
     devServer: {
        inline: true,
        historyApiFallback: true,
-       port: 8080
+       port: 8082
     },
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules'],

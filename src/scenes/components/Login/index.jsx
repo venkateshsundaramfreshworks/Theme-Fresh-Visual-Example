@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import { withTheme } from 'styled-components';
 
 import Form from 'components/Form';
 import Button from 'components/Button';
 import Title from 'components/Title';
+import Wrapper from 'components/Wrapper';
 
 import FormInput from 'components/Form/components/FormInput';
 
@@ -20,10 +21,6 @@ class Login extends React.Component {
    }
 
    render() {
-     const Wrapper = styled.section`
-            padding: 20em 30em;
-            background: papayawhip;
-            `;
       return (
         <Wrapper>
             <Title>
@@ -50,4 +47,4 @@ class Login extends React.Component {
 }
 
 
-export default Login;
+export default withTheme(Login);

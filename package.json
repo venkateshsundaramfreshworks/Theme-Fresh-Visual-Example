@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --hot",
-    "dev:server": "json-server --watch ./server/dummy/db.json --routes ./server/dummy/routes.json",
+    "dev:server": "json-server --watch ./server/dummy/db.json --routes ./server/dummy/routes.json --port 3004",
     "start": "concurrently \"npm run dev\" \"npm run dev:server\""
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "redux-thunk": "^2.2.0",
     "style-loader": "^0.21.0",
     "styled-components": "^3.2.6",
+    "styled-theming": "^2.2.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.0"
   },

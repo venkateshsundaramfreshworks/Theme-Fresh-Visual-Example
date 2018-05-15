@@ -5,15 +5,15 @@ import styled from 'styled-components';
 const Title = styled.h1`
             font-size: 1.5em;
             text-align: left;
-            color: ${props => props.themeColor ? props.themeColor : 'palevioletred'};
+            color: ${props => props.theme ? props.theme.fg : 'palevioletred'};
 `;
 
 Title.propTypes = {
-    themeColor: PropTypes.string
+    theme: PropTypes.shape({}),
 };
 
 Title.defaultProps = {
-    themeColor: '',
+    theme: {},
 };
 
 export default Title;

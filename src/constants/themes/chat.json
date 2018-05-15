@@ -1,0 +1,7 @@
+{
+    "themeAttributes": {
+        "name": "chat",
+        "background": {"type": "normal", "color": "#88d8be"},
+        "font": {"type": "normal", "color": "green"}
+    }
+}
